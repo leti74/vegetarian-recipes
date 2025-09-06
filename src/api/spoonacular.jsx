@@ -1,2 +1,2 @@
-export const BASE_URL = "https://api.spoonacular.com/recipes";
-export const API_KEY = "3de712a4dec94efcb5032bf28d94f71b";
+export const BASE_URL = import.meta.env.VITE_BASE_URL;
+export const API_KEY = import.meta.env.VITE_API_KEY;
