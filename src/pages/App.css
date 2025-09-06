@@ -14,7 +14,7 @@
     z-index: 1;
   }
 
-  .sfondo {
+  .wallpaper {
     position: absolute;
     background-color: black;
     width: 100%;
@@ -53,7 +53,7 @@
     color: #8b916d;
   }
 
-  .grassetto {
+  .bold {
     font-weight: 700;
   }
 
@@ -85,12 +85,12 @@
     font-size: 1.2rem;
   }
 
-  .bt-cerca a {
+  .bt-search a {
     text-decoration: none;
     color: #9e553b;
   }
 
-  .bt-cerca {
+  .bt-search {
     border: none;
     border-radius: 19px;
     padding: 10px 10px;
@@ -115,7 +115,7 @@
     height: 690px;
   }
 
-  .sfondo {
+  .wallpaper {
     position: absolute;
     background-color: black;
     width: 100%;
@@ -165,7 +165,7 @@
     font-size: 2.7rem;
   }
 
-  .grassetto {
+  .bold {
     font-weight: 700;
   }
 
@@ -199,12 +199,12 @@
     padding: 85px;
   }
 
-  .bt-cerca a {
+  .bt-search a {
     text-decoration: none;
     color: #9e553b;
   }
 
-  .bt-cerca {
+  .bt-search {
     border: none;
     border-radius: 19px;
     padding: 10px 10px;
@@ -226,7 +226,7 @@
     position: relative;
   }
 
-  .sfondo {
+  .wallpaper {
     height: 800px;
     position: absolute;
     background-color: black;
@@ -292,7 +292,7 @@
     font-size: 2.5rem;
   }
 
-  .grassetto {
+  .bold {
     font-weight: 700;
   }
 
@@ -327,12 +327,12 @@
     font-size: 2rem;
   }
 
-  .bt-cerca a {
+  .bt-search a {
     text-decoration: none;
     color: #9e553b;
   }
 
-  .bt-cerca {
+  .bt-search {
     border: none;
     border-radius: 19px;
     padding: 15px 15px;

@@ -1,28 +1,28 @@
 import { useState } from "react";
-import "./BarraDiRicerca.css";
+import "./SearchBar.css";
 import axios from "axios";
 import { BASE_URL } from "../api/spoonacular";
 import { API_KEY } from "../api/spoonacular";
 import { useContext } from "react";
-import { ElencoRicetteContext } from "../stores/ElencoRicetteContext";
+import { ListRecipeContext } from "../stores/ListRecipeContext";
 import { useLocation } from "react-router-dom";
 
-export const BarraDiRicerca = ({
-  titoloBarraDiRicerca,
-  placeholderBarraDiRicerca,
+export const SearchBar = ({
+  titleSearchBar,
+  placeholderSearchBar,
   scrollToRef,
 }) => {
   const location = useLocation();
   const [inputValue, setInputValue] = useState("");
-  const { setRicette } = useContext(ElencoRicetteContext);
+  const { setRecipes } = useContext(ListRecipeContext);
 
-  const handleclickCerca = () => {
-    const perIngrediente = location.pathname.includes("/perIngrediente");
+  const handleclickSearch = () => {
+    const byIngredient = location.pathname.includes("/byIngredient");
 
     axios
       .get(`${BASE_URL}/complexSearch`, {
         params: {
-          ...(perIngrediente
+          ...(byIngredient
             ? { includeIngredients: inputValue }
             : { query: inputValue }),
           apiKey: API_KEY,
@@ -32,9 +32,9 @@ export const BarraDiRicerca = ({
           addRecipeInformation: true,
         },
       })
-      .then((risposta) => {
-        setRicette(risposta.data.results);
-        console.log(risposta.data.results);
+      .then((answer) => {
+        setRecipes(answer.data.results);
+        console.log(answer.data.results);
         if (scrollToRef?.current) {
           scrollToRef.current.scrollIntoView({ behavior: "smooth" });
         }
@@ -51,21 +51,21 @@ export const BarraDiRicerca = ({
 
   return (
     <>
-      <div className="contenuto">
-        <h1 className="titolo-cerca"> {titoloBarraDiRicerca}</h1>
-        <div className="sezione-input">
+      <div className="content">
+        <h1 className="title-search"> {titleSearchBar}</h1>
+        <div className="section-input">
           <input
-            className="input-cerca"
+            className="input-search"
             type="text"
-            placeholder={placeholderBarraDiRicerca}
+            placeholder={placeholderSearchBar}
             onChange={handleInputChange}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                handleclickCerca();
+                handleclickSearch();
               }
             }}
           />
-          <button onClick={handleclickCerca} className="btn-invia">
+          <button onClick={handleclickSearch} className="btn-send">
             Send
           </button>
         </div>

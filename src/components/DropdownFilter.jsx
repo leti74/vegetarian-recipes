@@ -1,44 +1,44 @@
-import "./DropdownFiltro.css";
+import "./DropdownFilter.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { API_KEY, BASE_URL } from "../api/spoonacular";
 import axios from "axios";
 import { useContext } from "react";
-import { ElencoRicetteContext } from "../stores/ElencoRicetteContext";
+import { ListRecipeContext } from "../stores/ListRecipeContext";
 
-export const DropdownFiltro = ({ classeDropdown, scrollToRef }) => {
-  const { setRicette } = useContext(ElencoRicetteContext);
+export const DropdownFilter = ({ classeDropdown, scrollToRef }) => {
+  const { setRecipes } = useContext(ListRecipeContext);
 
-  const handleclickFiltro = (categoria) => {
+  const handleclickFilter = (category) => {
     axios
       .get(`${BASE_URL}/complexSearch`, {
         params: {
           apiKey: API_KEY,
-          type: categoria,
+          type: category,
           addRecipeInformation: true,
         },
       })
       .then((res) => {
-        setRicette(res.data.results);
+        setRecipes(res.data.results);
         console.log(res.data.results);
         if (scrollToRef?.current) {
           scrollToRef.current.scrollIntoView({ behavior: "smooth" });
         }
       })
-      .catch((err) => console.error("Errore nel filtro:", err));
+      .catch((err) => console.error("Error in the filter:", err));
   };
 
   return (
     <DropdownButton
       id="dropdown-basic-button"
       title="Filter"
-      className={`filtro-dropdown ${classeDropdown}`}
+      className={`filter-dropdown ${classeDropdown}`}
     >
       <Dropdown.Item
         href="#/action-1"
         className="selectedItem"
         onClick={() => {
-          handleclickFiltro("breakfast");
+          handleclickFilter("breakfast");
         }}
       >
         Breakfast
@@ -46,7 +46,7 @@ export const DropdownFiltro = ({ classeDropdown, scrollToRef }) => {
       <Dropdown.Item
         className="selectedItem"
         onClick={() => {
-          handleclickFiltro("snack");
+          handleclickFilter("snack");
         }}
       >
         Snack
@@ -54,7 +54,7 @@ export const DropdownFiltro = ({ classeDropdown, scrollToRef }) => {
       <Dropdown.Item
         className="selectedItem"
         onClick={() => {
-          handleclickFiltro("main course");
+          handleclickFilter("main course");
         }}
       >
         Main Course
@@ -62,15 +62,15 @@ export const DropdownFiltro = ({ classeDropdown, scrollToRef }) => {
       <Dropdown.Item
         className="selectedItem"
         onClick={() => {
-          handleclickFiltro("side dish");
+          handleclickFilter("side dish");
         }}
       >
-        Side dish
+        Side Dish
       </Dropdown.Item>
       <Dropdown.Item
         className="selectedItem"
         onClick={() => {
-          handleclickFiltro("dessert");
+          handleclickFilter("dessert");
         }}
       >
         Dessert

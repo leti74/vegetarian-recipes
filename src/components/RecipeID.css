@@ -1,5 +1,5 @@
 @media only screen and (max-width: 426px) {
-  .ricetta {
+  .recipe {
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
@@ -8,7 +8,7 @@
     padding-bottom: 30px;
   }
 
-  .img-contenitore img {
+  .img-container img {
     width: 100%;
     margin-bottom: 10px;
     object-fit: cover;
@@ -16,7 +16,7 @@
     height: 100%;
   }
 
-  .ricetta h4 {
+  .recipe h4 {
     margin-bottom: 13px;
     color: #563b30;
     text-align: start;
@@ -28,7 +28,7 @@
     padding-top: 20px;
   }
 
-  .div-categorie {
+  .div-categories {
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@
     flex-wrap: wrap;
   }
 
-  .bt-categoria {
+  .bt-category {
     background-color: #b9926a;
     border: none;
     color: white;
@@ -47,7 +47,7 @@
 }
 
 @media only screen and (min-width: 427px) and (max-width: 1023px) {
-  .ricetta {
+  .recipe {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -58,10 +58,10 @@
     height: 550px;
   }
 
-  .img-contenitore {
+  .img-container {
     height: 300px;
   }
-  .img-contenitore img {
+  .img-container img {
     width: 100%;
     margin-bottom: 20px;
     border-top-left-radius: 10px;
@@ -71,11 +71,11 @@
     height: 100%;
   }
 
-  .titolo-contenitore {
+  .title-container {
     display: flex;
   }
 
-  .ricetta h4 {
+  .recipe h4 {
     margin-bottom: 15px;
     color: #563b30;
     text-align: start;
@@ -88,7 +88,7 @@
     max-width: 90%;
   }
 
-  .div-categorie {
+  .div-categories {
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
@@ -97,7 +97,7 @@
     align-items: flex-end;
   }
 
-  .bt-categoria {
+  .bt-category {
     background-color: #b9926a;
     border: none;
     color: white;
@@ -108,7 +108,7 @@
 }
 
 @media (min-width: 1024px) {
-  .ricetta {
+  .recipe {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -120,10 +120,10 @@
     height: 650px;
   }
 
-  .img-contenitore {
+  .img-container {
     height: 250px;
   }
-  .img-contenitore img {
+  .img-container img {
     width: 100%;
     margin-bottom: 10px;
     border-top-left-radius: 10px;
@@ -133,11 +133,11 @@
     height: 100%;
   }
 
-  .titolo-contenitore {
+  .title-container {
     display: flex;
   }
 
-  .ricetta h4 {
+  .recipe h4 {
     margin-top: 40px;
     margin-bottom: 40px;
     color: #563b30;
@@ -151,7 +151,7 @@
     max-width: 95%;
   }
 
-  .div-categorie {
+  .div-categories {
     display: flex;
     gap: 12px;
     margin-bottom: 70px;
@@ -160,7 +160,7 @@
     flex-wrap: wrap;
   }
 
-  .bt-categoria {
+  .bt-category {
     background-color: #b9926a;
     border: none;
     color: white;

@@ -18,7 +18,7 @@
   display: none;
 }
 
-.sezione-logo {
+.section-logo {
   display: flex;
   align-items: center;
 }
@@ -28,7 +28,7 @@
   color: #8b916d;
 }
 
-.sezioni a {
+.section a {
   text-decoration: none;
   color: #bfa583;
 }
@@ -115,7 +115,7 @@
     font-size: 1.2rem;
   }
 
-  .sezioni {
+  .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,7 +156,7 @@
     display: none;
   }
 
-  .sezioni {
+  .section {
     display: flex;
     justify-content: space-between;
     align-items: center;

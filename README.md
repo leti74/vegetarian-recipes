@@ -1,69 +1,69 @@
 # 🌿 VegFacile
 
-**VegFacile** è un sito web sviluppato con React che consente agli utenti di cercare e scoprire ricette vegetariane in modo semplice, veloce e interattivo. Il progetto promuove uno stile di vita sano e sostenibile, dimostrando che la cucina vegetale può essere gustosa, creativa e alla portata di tutti.
+**VegFacile** is a website developed with React that allows users to search and discover vegetarian recipes in a simple, fast, and interactive way. The project promotes a healthy and sustainable lifestyle, showing that plant-based cooking can be tasty, creative, and accessible to everyone.
 
-## 🚀 Obiettivi del progetto
+## 🚀 Project Goals
 
-- Offrire uno strumento digitale per la ricerca di ricette vegetariane
-- Promuovere la consapevolezza alimentare e il benessere personale
-- Dimostrare l’utilizzo pratico di React e delle API esterne in un progetto reale
+- Provide a digital tool for searching vegetarian recipes
+- Promote food awareness and personal well-being
+- Demonstrate the practical use of React and external APIs in a real-world project
 
-## 🛠️ Tecnologie utilizzate
+## 🛠️ Technologies Used
 
-- **React** – per la creazione dell’interfaccia utente e la gestione dello stato
-- **React Router** – per la navigazione tra le pagine
-- **Axios** – per le chiamate HTTP all’API Spoonacular
-- **Spoonacular API** – per il recupero delle ricette vegetariane
-- **CSS** – per lo styling e il design responsive
-- **Vite** – per la configurazione e il build del progetto
+- **React** – for building the user interface and managing state
+- **React Router** – for navigation between pages
+- **Axios** – for HTTP requests to the Spoonacular API
+- **Spoonacular API** – for retrieving vegetarian recipes
+- **CSS** – for styling and responsive design
+- **Vite** – for project configuration and build
 
-## ⚙️ Funzionalità principali
+## ⚙️ Main Features
 
-- Ricerca ricette per **categoria** (antipasto, dolce, contorno, ecc.)
-- Ricerca ricette per **nome del piatto**
-- Ricerca ricette per **imgredienti**
-- Visualizzazione dettagliata con titolo, immagine, ingredienti e descrizione
-- Navigazione fluida tra homepage, ricerca e dettaglio ricetta
-- Design responsive per desktop e mobile
-- Interattività migliorata con eventi come la ricerca tramite tasto Enter
+- Search recipes by **category** (appetizer, dessert, side dish, etc.)
+- Search recipes by **dish name**
+- Search recipes by **ingredients**
+- Detailed view with title, image, ingredients, and description
+- Smooth navigation between homepage, search, and recipe detail
+- Responsive design for desktop and mobile
+- Enhanced interactivity with events like Enter-key search
 
-## 🍳 Procedimento d’uso
+## 🍳 How to Use
 
-Ecco come utilizzare **VegFacile** passo dopo passo:
+Here’s how to use **VegFacile** step by step:
 
-1. **Accedi alla homepage**  
-   Visita il sito [VegFacile](https://leti74.github.io/ricette-vegetariane) e lasciati ispirare dalla filosofia:  
-   _“Trasforma il mondo, un ingrediente alla volta”_.
+1. **Access the homepage**  
+   Visit the site [VegFacile](https://leti74.github.io/vegetarian-recipes) and get inspired by the philosophy:  
+   _“Change the world, one ingredient at a time”_
 
-2. **Naviga tra le sezioni**  
-   Usa il menu per esplorare:
+2. **Browse the sections**  
+   Use the menu to explore:
 
-   - `Home`: introduzione al progetto
-   - `Why`: scopri i benefici della cucina vegetale
-   - `By Ingredient`: cerca ricette in base agli ingredienti disponibili
-   - `Ricette`: sfoglia piatti vegetariani facili e veloci
+   - `Home`: introduction to the project
+   - `Why`: discover the benefits of plant-based cooking
+   - `By Ingredient`: search recipes based on available ingredients
+   - `Recipes`: browse easy and quick vegetarian dishes
 
-3. **Cerca una ricetta**  
-   Inserisci il nome del piatto o un ingrediente nella barra di ricerca.  
-   Premi **Enter** per avviare la ricerca.
+3. **Search for a recipe**  
+   Enter the dish name or an ingredient in the search bar.  
+   Press **Enter** to start the search.
 
-4. **Esplora i risultati**  
-   Visualizza le ricette con:
+4. **Explore the results**  
+   View recipes with:
 
-   - Titolo e immagine
-   - Categoria (es. dolce, contorno, antipasto)
-   - Ingredienti principali
+   - Title and image
+   - Category (e.g., dessert, side dish, appetizer)
+   - Main ingredients
 
-5. **Visualizza i dettagli**  
-   Clicca su una ricetta per vedere: 
+5. **View the details**  
+   Click on a recipe to see:
 
-   - Descrizione completa
-   - Lista ingredienti
-   - Istruzioni per la preparazione
+   - Full description
+   - Ingredient list
+   - Preparation instructions
 
-6. **Sperimenta e condividi**  
-   Prova la ricetta a casa e condividila con amici e familiari.
+6. **Try and share**  
+   Cook the recipe at home and share it with friends and family.
 
- ## Link App
+## App Link
 
- https://leti74.github.io/ricette-vegetariane/
+https://leti74.github.io/vegetarian-recipes/

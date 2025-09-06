@@ -1,10 +1,10 @@
-.filtro-dropdown .dropdown-menu {
+.filter-dropdown .dropdown-menu {
   right: 0 !important;
   left: auto !important;
 }
 
 @media only screen and (max-width: 426px) {
-  .filtro-dropdown .btn-primary {
+  .filter-dropdown .btn-primary {
     background-color: transparent !important;
     border: none;
     color: #563b30;
@@ -35,7 +35,7 @@
     cursor: pointer;
   }
 
-  .Ricette {
+  .filter-recipes {
     position: absolute;
     top: 90px;
     display: flex;
@@ -45,7 +45,7 @@
 }
 
 @media only screen and (min-width: 427px) and (max-width: 1023px) {
-  .filtro-dropdown .btn-primary {
+  .filter-dropdown .btn-primary {
     background-color: transparent !important;
     border: none;
     color: #563b30;
@@ -75,7 +75,7 @@
     font-weight: 500;
     cursor: pointer;
   }
-  .Ricette {
+  .filter-recipes {
     position: absolute;
     top: 120px;
     display: flex;
@@ -85,7 +85,7 @@
 }
 
 @media (min-width: 1024px) {
-  .filtro-dropdown .btn-primary {
+  .filter-dropdown .btn-primary {
     background-color: transparent !important;
     border: none;
     color: #563b30;
@@ -106,7 +106,7 @@
     font-size: 1.3rem;
     padding: 20px 170px 20px 60px;
   }
-  .Ricette {
+  .filter-recipes {
     position: absolute;
     top: 150px;
     display: flex;

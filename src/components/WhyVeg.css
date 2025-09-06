@@ -1,20 +1,20 @@
-.tema-animali {
+.animal-theme {
   background-color: #bb6647cd;
 }
-.tema-pianeta {
+.planet-theme {
   background-color: rgba(59, 100, 100, 0.593);
 }
-.tema-salute {
+.health-theme {
   background-color: rgba(133, 122, 41, 0.595);
 }
 
 @media only screen and (max-width: 426px) {
-  .div1-perche {
+  .div1-why {
     display: flex;
     flex-direction: column;
     color: #563b30;
   }
-  .sfondo-img-perche {
+  .background-img-why {
     padding-top: 50px;
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -28,25 +28,25 @@
     object-fit: cover;
     display: block;
   }
-  .div1-testo {
+  .div1-text {
     padding: 25px;
     color: white;
     text-align: center;
     font-size: 0.9rem;
   }
 
-  .div1-testo h2 {
+  .div1-text h2 {
     margin-top: 50px;
     margin-bottom: 20px;
     color: #ffffff;
     font-size: 1.7rem;
   }
 
-  .div1-testo p {
+  .div1-text p {
     margin-bottom: 30px;
   }
 
-  .div2-perche {
+  .div2-why {
     background-color: white;
     text-align: center;
     margin: 0px -20px;
@@ -55,19 +55,19 @@
     margin: 0;
   }
 
-  .div2-perche h3 {
+  .div2-why h3 {
     color: #8b916d;
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: 427px) and (max-width: 1023px) {
-  .div1-perche {
+  .div1-why {
     display: flex;
     flex-direction: column;
     color: #563b30;
   }
-  .sfondo-img-perche {
+  .background-img-why {
     padding-top: 60px;
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -81,25 +81,25 @@
     object-fit: cover;
     display: block;
   }
-  .div1-testo {
+  .div1-text {
     padding: 30px;
     text-align: center;
     font-size: 1.4rem;
     color: white;
   }
 
-  .div1-testo h2 {
+  .div1-text h2 {
     margin-top: 120px;
     margin-bottom: 30px;
     color: #ffffff;
     font-size: 2.5rem;
   }
 
-  .div1-testo p {
+  .div1-text p {
     margin: 0 50px 60px;
   }
 
-  .div2-perche {
+  .div2-why {
     background-color: white;
     margin: 0px -20px;
     padding: 50px;
@@ -108,7 +108,7 @@
     text-align: center;
   }
 
-  .div2-perche h3 {
+  .div2-why h3 {
     color: #8b916d;
     margin-bottom: 50px;
     margin-top: 40px;
@@ -117,7 +117,7 @@
 }
 
 @media (min-width: 1024px) {
-  .div1-perche {
+  .div1-why {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -126,7 +126,7 @@
     color: #ffffff;
     margin: 170px 90px 90px;
   }
-  .sfondo-img-perche {
+  .background-img-why {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 370px;
@@ -141,20 +141,20 @@
     display: block;
     border-radius: 20px;
   }
-  .div1-testo {
+  .div1-text {
     text-align: start;
     font-size: 1.1rem;
     padding: 50px;
     border-radius: 30px;
   }
 
-  .div1-testo h2 {
+  .div1-text h2 {
     margin-bottom: 70px;
     color: white;
     font-size: 2.5rem;
   }
 
-  .div2-perche {
+  .div2-why {
     background-color: white;
     padding: 60px 0px;
     font-size: 1rem;
@@ -163,11 +163,11 @@
     border-radius: 50px;
   }
 
-  .div2-perche p {
+  .div2-why p {
     padding: 10px 130px;
   }
 
-  .div2-perche h3 {
+  .div2-why h3 {
     color: #8b916d;
     margin-bottom: 50px;
     margin-top: 10px;

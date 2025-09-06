@@ -1,11 +1,11 @@
 @media only screen and (max-width: 426px) {
-  .titolo-cerca {
+  .title-search {
     text-align: center;
     margin-bottom: 25px;
     color: #563b30;
     margin-top: 30px;
   }
-  .sezione-input {
+  .section-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,16 +13,16 @@
     margin-bottom: 50px;
   }
 
-  .input-cerca {
+  .input-search {
     border: 2px solid transparent;
     border-radius: 10px;
     padding: 6px 13px;
   }
 
-  .input-cerca:focus {
+  .input-search:focus {
     outline: none;
   }
-  .btn-invia {
+  .btn-send {
     padding: 6px 16px;
     border: none;
     border-radius: 30px;
@@ -34,14 +34,14 @@
 }
 
 @media only screen and (min-width: 427px) and (max-width: 1023px) {
-  .titolo-cerca {
+  .title-search {
     font-size: 2.7rem;
     text-align: center;
     margin-bottom: 50px;
     color: #563b30;
     margin-top: 100px;
   }
-  .sezione-input {
+  .section-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@
     margin-bottom: 100px;
   }
 
-  .input-cerca {
+  .input-search {
     border: 2px solid transparent;
     border-radius: 20px;
     padding: 10px 25px 10px;
@@ -57,15 +57,15 @@
     font-size: 1.4rem;
   }
 
-  .input-cerca::placeholder {
+  .input-search::placeholder {
     font-size: 1.7rem;
   }
 
-  .input-cerca:focus {
+  .input-search:focus {
     outline: none;
   }
 
-  .btn-invia {
+  .btn-send {
     padding: 10px 17px;
     border: none;
     border-radius: 30px;
@@ -78,14 +78,14 @@
 }
 
 @media (min-width: 1024px) {
-  .titolo-cerca {
+  .title-search {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 70px;
     color: #563b30;
     margin-top: 160px;
   }
-  .sezione-input {
+  .section-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@
     margin-bottom: 300px;
   }
 
-  .input-cerca {
+  .input-search {
     border: 2px solid transparent;
     border-radius: 50px;
     padding: 15px 45px 15px;
@@ -101,15 +101,15 @@
     font-size: 1.5rem;
   }
 
-  .input-cerca::placeholder {
+  .input-search::placeholder {
     font-size: 1.5rem;
   }
 
-  .input-cerca:focus {
+  .input-search:focus {
     outline: none;
   }
 
-  .btn-invia {
+  .btn-send {
     padding: 15px 30px;
     border: none;
     border-radius: 70px;

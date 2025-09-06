@@ -2,25 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./pages/App.jsx";
-import { Perche } from "./pages/Perche.jsx";
-import { RicettePerIngrediente } from "./pages/RicettePerIngrediente.jsx";
-import { CercaRicetta } from "./pages/CercaRicetta.jsx";
-import { RicettaSelezionata } from "./pages/RicettaSelezionata.jsx";
-import { ElencoRicetteProvider } from "./stores/ElencoRicetteContext.jsx";
+import { RecipesByIngredient } from "./pages/RecipesByIngredient.jsx";
+import { RecipePage } from "./pages/RecipePage.jsx";
+import { ListRecipeProvider } from "./stores/ListRecipeContext.jsx";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { SearchRecipe } from "./pages/SearchRecipe.jsx";
+import { WhyPage } from "./pages/WhyPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ElencoRicetteProvider>
+  <ListRecipeProvider>
     <React.StrictMode>
       <HashRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/perche" element={<Perche />} />
-          <Route path="/perIngrediente" element={<RicettePerIngrediente />} />
-          <Route path="/cerca" element={<CercaRicetta />} />
-          <Route path="/:ricettaID" element={<RicettaSelezionata />} />
+          <Route path="/why" element={<WhyPage />} />
+          <Route path="/byIngredient" element={<RecipesByIngredient />} />
+          <Route path="/search" element={<SearchRecipe />} />
+          <Route path="/:recipeID" element={<RecipePage />} />
         </Routes>
       </HashRouter>
     </React.StrictMode>
-  </ElencoRicetteProvider>
+  </ListRecipeProvider>
 );

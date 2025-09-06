@@ -2,7 +2,7 @@ import { Navigationbar } from "../components/Navigationbar";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Footer } from "../components/Footer";
-import { ElencoRicette } from "../components/ElencoRicette";
+import { ListRecipes } from "../components/ListRecipes";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -12,9 +12,9 @@ function App() {
       <ScrollToTop />
       <Navigationbar />
 
-      <div className="sfondo"></div>
+      <div className="wallpaper"></div>
       <div className="home1">
-        <img src="ricette-vegetali.jpg" alt="img vegetarian cuisine" />
+        <img src="vegetable.jpg" alt="img vegetarian cuisine" loading="lazy" />
 
         <div className="slogan">
           <h1>
@@ -27,7 +27,7 @@ function App() {
             <p>
               Choose wellness and discover the taste of a vegan lifestyle.
               <br></br>
-              Ricette, ispirazione, consapevolezza: tutto in un solo posto.
+              Recipes, inspiration, awareness: everything in one place.
             </p>
           </div>
         </div>
@@ -38,11 +38,9 @@ function App() {
         <p>
           Understanding food and knowing how to prepare it is essential to
           taking care of ourselves over time. This is why we promote a{" "}
-          <span className="grassetto"> plant-based cuisine</span>, A conscious
-          choice that is good for your health, stems from an ethical vision, and
-          <span className="grassetto">
-            protects the environment we live in.
-          </span>
+          <span className="bold"> plant-based cuisine</span>, A conscious choice
+          that is good for your health, stems from an ethical vision, and
+          <span className="bold">protects the environment we live in.</span>
         </p>
       </div>
 
@@ -54,7 +52,7 @@ function App() {
         </h3>
         <p>Get inspired</p>
 
-        <ElencoRicette></ElencoRicette>
+        <ListRecipes></ListRecipes>
       </div>
 
       <div className="home4">
@@ -62,8 +60,8 @@ function App() {
           A space where plant-based cuisine isn't a sacrifice, but an adventure
           of flavor and creativity that can make a difference every day.
         </h3>
-        <button className="bt-cerca">
-          <Link to={"/cerca"} className="grassetto">
+        <button className="bt-search">
+          <Link to={"/search"} className="bold">
             Search for a recipe
           </Link>
         </button>
