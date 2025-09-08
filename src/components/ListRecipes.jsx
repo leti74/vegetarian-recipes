@@ -34,7 +34,7 @@ export const ListRecipes = () => {
 
   return (
     <div className="list-recipes">
-      {recipes?.length === 0 ? (
+      {!recipes || recipes.length === 0 ? (
         <p className="message-no-recipe">No recipes found 🍽️</p>
       ) : (
         recipes?.map((recipe) => (

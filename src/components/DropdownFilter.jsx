@@ -6,10 +6,11 @@ import axios from "axios";
 import { useContext } from "react";
 import { ListRecipeContext } from "../stores/ListRecipeContext";
 
-export const DropdownFilter = ({ classeDropdown, scrollToRef }) => {
-  const { setRecipes } = useContext(ListRecipeContext);
+export const DropdownFilter = ({ classeDropdown }) => {
+  const { setRecipes, setLoading } = useContext(ListRecipeContext);
 
   const handleclickFilter = (category) => {
+    setLoading(true);
     axios
       .get(`${BASE_URL}/complexSearch`, {
         params: {
@@ -21,9 +22,7 @@ export const DropdownFilter = ({ classeDropdown, scrollToRef }) => {
       .then((res) => {
         setRecipes(res.data.results);
         console.log(res.data.results);
-        if (scrollToRef?.current) {
-          scrollToRef.current.scrollIntoView({ behavior: "smooth" });
-        }
+        setLoading(false);
       })
       .catch((err) => console.error("Error in the filter:", err));
   };

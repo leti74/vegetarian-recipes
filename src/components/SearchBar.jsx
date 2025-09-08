@@ -6,17 +6,15 @@ import { API_KEY } from "../api/spoonacular";
 import { useContext } from "react";
 import { ListRecipeContext } from "../stores/ListRecipeContext";
 import { useLocation } from "react-router-dom";
+import BasicSpinner from "./BasicSpinner";
 
-export const SearchBar = ({
-  titleSearchBar,
-  placeholderSearchBar,
-  scrollToRef,
-}) => {
+export const SearchBar = ({ titleSearchBar, placeholderSearchBar }) => {
   const location = useLocation();
   const [inputValue, setInputValue] = useState("");
-  const { setRecipes } = useContext(ListRecipeContext);
+  const { setRecipes, isLoading, setLoading } = useContext(ListRecipeContext);
 
   const handleclickSearch = () => {
+    setLoading(true);
     const byIngredient = location.pathname.includes("/byIngredient");
 
     axios
@@ -34,10 +32,8 @@ export const SearchBar = ({
       })
       .then((answer) => {
         setRecipes(answer.data.results);
+        setLoading(false);
         console.log(answer.data.results);
-        if (scrollToRef?.current) {
-          scrollToRef.current.scrollIntoView({ behavior: "smooth" });
-        }
       })
       .catch((error) => {
         console.log("errore nella richiesta:", error);
@@ -69,6 +65,13 @@ export const SearchBar = ({
             Send
           </button>
         </div>
+
+        {isLoading && (
+          <div className="loader">
+            <BasicSpinner />
+            <p>Loading recipes</p>
+          </div>
+        )}
       </div>
     </>
   );
