@@ -14,6 +14,7 @@ export const SearchBar = ({ titleSearchBar, placeholderSearchBar }) => {
   const { setRecipes, isLoading, setLoading } = useContext(ListRecipeContext);
 
   const handleclickSearch = () => {
+    if (!inputValue.trim()) return;
     setLoading(true);
     const byIngredient = location.pathname.includes("/byIngredient");
 
@@ -26,23 +27,43 @@ export const SearchBar = ({ titleSearchBar, placeholderSearchBar }) => {
           apiKey: API_KEY,
           fillIngredients: true,
           instructionsRequired: true,
-          tags: "vegetarian",
+          diet: "vegetarian",
           addRecipeInformation: true,
         },
       })
       .then((answer) => {
-        setRecipes(answer.data.results);
+        const results = answer.data.results;
+
+        if (byIngredient) {
+          const searchTerms = inputValue
+            .toLowerCase()
+            .split(",")
+            .map((term) => term.trim());
+
+          const filtered = results.filter((recipe) =>
+            recipe.extendedIngredients?.some((ingredient) =>
+              searchTerms.some((term) =>
+                ingredient.name.toLowerCase().includes(term)
+              )
+            )
+          );
+
+          setRecipes(filtered);
+        } else {
+          setRecipes(results);
+        }
+
         setLoading(false);
-        console.log(answer.data.results);
       })
       .catch((error) => {
         console.log("errore nella richiesta:", error);
+        setRecipes([]);
+        setLoading(false);
       });
   };
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
-    console.log(e.target.value);
   };
 
   return (

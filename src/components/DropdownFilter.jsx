@@ -17,6 +17,7 @@ export const DropdownFilter = ({ classeDropdown }) => {
           apiKey: API_KEY,
           type: category,
           addRecipeInformation: true,
+          diet: "vegetarian",
         },
       })
       .then((res) => {

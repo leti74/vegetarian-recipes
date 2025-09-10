@@ -15,7 +15,7 @@ export const ListRecipes = () => {
     axios
       .get(`${BASE_URL}/random`, {
         params: {
-          tags: "vegetarian",
+          diet: "vegetarian",
           addRecipeInformation: true,
           apiKey: API_KEY,
           number: 8,
