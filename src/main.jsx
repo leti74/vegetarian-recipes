@@ -1,26 +1,35 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./pages/App.jsx";
-import { RecipesByIngredient } from "./pages/RecipesByIngredient.jsx";
-import { RecipePage } from "./pages/RecipePage.jsx";
 import { ListRecipeProvider } from "./stores/ListRecipeContext.jsx";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { SearchRecipe } from "./pages/SearchRecipe.jsx";
-import { WhyPage } from "./pages/WhyPage.jsx";
+import { HelmetProvider } from "react-helmet-async";
+
+// Lazy loading delle pagine
+const App = lazy(() => import("./pages/App.jsx"));
+const RecipesByIngredient = lazy(() =>
+  import("./pages/RecipesByIngredient.jsx")
+);
+const RecipePage = lazy(() => import("./pages/RecipePage.jsx"));
+const SearchRecipe = lazy(() => import("./pages/SearchRecipe.jsx"));
+const WhyPage = lazy(() => import("./pages/WhyPage.jsx"));
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ListRecipeProvider>
-    <React.StrictMode>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/why" element={<WhyPage />} />
-          <Route path="/byIngredient" element={<RecipesByIngredient />} />
-          <Route path="/search" element={<SearchRecipe />} />
-          <Route path="/:recipeID" element={<RecipePage />} />
-        </Routes>
-      </HashRouter>
-    </React.StrictMode>
+    <HelmetProvider>
+      <React.StrictMode>
+        <HashRouter>
+          <Suspense fallback={<div>Caricamento...</div>}>
+            <Routes>
+              <Route path="/" element={<App />} />
+              <Route path="/why" element={<WhyPage />} />
+              <Route path="/byIngredient" element={<RecipesByIngredient />} />
+              <Route path="/search" element={<SearchRecipe />} />
+              <Route path="/:recipeID" element={<RecipePage />} />
+            </Routes>
+          </Suspense>
+        </HashRouter>
+      </React.StrictMode>
+    </HelmetProvider>
   </ListRecipeProvider>
 );

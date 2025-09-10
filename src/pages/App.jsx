@@ -5,10 +5,19 @@ import { Footer } from "../components/Footer";
 import { ListRecipes } from "../components/ListRecipes";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
+import { Helmet } from "react-helmet-async";
 
-function App() {
+const App = () => {
   return (
     <>
+      <Helmet>
+        <title>EasyVeg | Ricette Vegetariane e Vita Sostenibile</title>
+        <meta
+          name="description"
+          content="Scopri ricette vegetariane facili e veloci, consigli per uno stile di vita sano e sostenibile, e l'ispirazione per trasformare il mondo un ingrediente alla volta."
+        />
+      </Helmet>
+
       <ScrollToTop />
       <Navigationbar />
 
@@ -69,6 +78,6 @@ function App() {
       <Footer></Footer>
     </>
   );
-}
+};
 
 export default App;

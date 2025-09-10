@@ -2,9 +2,17 @@ import { Navigationbar } from "../components/Navigationbar";
 import "./WhyPage.css";
 import { Footer } from "../components/Footer";
 import { WhyVeg } from "../components/WhyVeg";
-export const WhyPage = () => {
+import { Helmet } from "react-helmet-async";
+const WhyPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Perché Scegliere una Dieta Vegetale | EasyVeg</title>
+        <meta
+          name="description"
+          content="Scopri i motivi etici, ambientali e salutistici per adottare una dieta vegetale."
+        />
+      </Helmet>
       <Navigationbar></Navigationbar>
       <WhyVeg
         whyIMG="/vegetarian-recipes/farms.jpg"
@@ -68,3 +76,5 @@ export const WhyPage = () => {
     </>
   );
 };
+
+export default WhyPage;

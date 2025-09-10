@@ -4,8 +4,9 @@ import { ListRecipeContext } from "../stores/ListRecipeContext";
 import { useParams } from "react-router-dom";
 import { Navigationbar } from "../components/Navigationbar";
 import { Footer } from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
-export const RecipePage = () => {
+const RecipePage = () => {
   const { recipes } = useContext(ListRecipeContext);
   const { recipeID } = useParams();
   console.log(recipeID);
@@ -26,6 +27,13 @@ export const RecipePage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{recipe.title} | EasyVeg</title>
+        <meta
+          name="description"
+          content={stripHTML(recipe.summary).slice(0, 160) + "..."}
+        />
+      </Helmet>
       <Navigationbar />
       <div className="selected-recipe">
         <div className="img-title">
@@ -77,3 +85,4 @@ export const RecipePage = () => {
     </>
   );
 };
+export default RecipePage;

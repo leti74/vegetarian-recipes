@@ -2,10 +2,18 @@ import { SearchBar } from "../components/SearchBar";
 import { Navigationbar } from "../components/Navigationbar";
 import { ListRecipes } from "../components/ListRecipes";
 import { Footer } from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
-export const RecipesByIngredient = () => {
+const RecipesByIngredient = () => {
   return (
     <>
+      <Helmet>
+        <title>Ricette per Ingrediente | EasyVeg</title>
+        <meta
+          name="description"
+          content="Trova ricette vegetariane in base ai suoi ingredienti."
+        />
+      </Helmet>
       <Navigationbar></Navigationbar>
 
       <SearchBar
@@ -23,3 +31,5 @@ export const RecipesByIngredient = () => {
     </>
   );
 };
+
+export default RecipesByIngredient;
