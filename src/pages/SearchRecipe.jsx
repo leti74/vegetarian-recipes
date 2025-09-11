@@ -1,10 +1,10 @@
 import "./SearchRecipe.css";
 import { SearchBar } from "../components/SearchBar";
 import { Footer } from "../components/Footer";
-import { Navigationbar } from "../components/Navigationbar";
 import { DropdownFilter } from "../components/DropdownFilter";
 import { ListRecipes } from "../components/ListRecipes";
 import { Helmet } from "react-helmet-async";
+import { Navigationbar } from "../components/Navigationbar";
 
 const SearchRecipe = () => {
   return (
@@ -17,7 +17,6 @@ const SearchRecipe = () => {
         />
       </Helmet>
       <Navigationbar />
-
       <DropdownFilter classeDropdown="filter-recipes" />
 
       <SearchBar

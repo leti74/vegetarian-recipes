@@ -1,8 +1,8 @@
 import { SearchBar } from "../components/SearchBar";
-import { Navigationbar } from "../components/Navigationbar";
 import { ListRecipes } from "../components/ListRecipes";
 import { Footer } from "../components/Footer";
 import { Helmet } from "react-helmet-async";
+import { Navigationbar } from "../components/Navigationbar";
 
 const RecipesByIngredient = () => {
   return (
@@ -14,8 +14,7 @@ const RecipesByIngredient = () => {
           content="Trova ricette vegetariane in base ai suoi ingredienti."
         />
       </Helmet>
-      <Navigationbar></Navigationbar>
-
+      <Navigationbar />
       <SearchBar
         titleSearchBar={"By Ingredient"}
         placeholderSearchBar={"Enter Ingredient"}

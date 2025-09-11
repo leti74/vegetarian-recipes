@@ -26,6 +26,7 @@
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    background-color: white;
     padding: 40px 0px 40px !important;
   }
 
@@ -51,6 +52,7 @@
     flex-wrap: wrap;
     padding: 130px 20px 130px !important;
     justify-content: center;
+    background-color: white;
   }
 
   .link-recipe {

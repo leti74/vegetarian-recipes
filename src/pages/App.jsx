@@ -1,11 +1,10 @@
-import { Navigationbar } from "../components/Navigationbar";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Footer } from "../components/Footer";
 import { ListRecipes } from "../components/ListRecipes";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 import { Helmet } from "react-helmet-async";
+import { Navigationbar } from "../components/Navigationbar";
 
 const App = () => {
   return (
@@ -17,9 +16,8 @@ const App = () => {
           content="Scopri ricette vegetariane facili e veloci, consigli per uno stile di vita sano e sostenibile, e l'ispirazione per trasformare il mondo un ingrediente alla volta."
         />
       </Helmet>
-
-      <ScrollToTop />
       <Navigationbar />
+      <ScrollToTop />
 
       <div className="wallpaper"></div>
       <div className="home1">

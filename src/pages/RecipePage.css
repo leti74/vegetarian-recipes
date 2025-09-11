@@ -1,6 +1,5 @@
 @media only screen and (max-width: 426px) {
   .selected-recipe {
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,7 +118,6 @@
 
 @media only screen and (min-width: 427px) and (max-width: 1023px) {
   .selected-recipe {
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,11 +242,6 @@
 
 @media (min-width: 1024px) {
   .selected-recipe {
-    margin-top: 230px;
-  }
-
-  .selected-recipe {
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;

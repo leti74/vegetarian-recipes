@@ -1,8 +1,8 @@
-import { Navigationbar } from "../components/Navigationbar";
 import "./WhyPage.css";
 import { Footer } from "../components/Footer";
 import { WhyVeg } from "../components/WhyVeg";
 import { Helmet } from "react-helmet-async";
+import { Navigationbar } from "../components/Navigationbar";
 const WhyPage = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const WhyPage = () => {
           content="Scopri i motivi etici, ambientali e salutistici per adottare una dieta vegetale."
         />
       </Helmet>
-      <Navigationbar></Navigationbar>
+      <Navigationbar />
       <WhyVeg
         whyIMG="/vegetarian-recipes/farms.jpg"
         whyTitle1="Why animals deserve fairness."
